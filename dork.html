@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Dork Generator Journal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #111;
+            color: #fff;
+            text-align: center;
+            padding-top: 100px;
+        }
+        input {
+            padding: 10px;
+            width: 300px;
+            border-radius: 5px;
+            border: none;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #f10d0d;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>5YLEH</h1>
+        <p>MANUAL DORK OJS</p>
+
+        <input type="text" id="keyword" placeholder="site?">
+        <br><br>
+        <button onclick="generateDork()">Cari</button>
+    </div>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('https://img.wattpad.com/3cbb085f9ea370690ccc45182a0a7316c805dab6/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f776d6b565576716773526d6f39413d3d2d3330343337373939392e313438343531623963373165313166663434383834323235313139352e676966') no-repeat center center/cover;
+}
+    
+        /* Overlay gelap biar tulisan kebaca */
+        body::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 0;
+        }
+    
+        .container {
+            position: relative;
+            z-index: 1;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            text-align: center;
+            color: #fff;
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
+        }
+    
+        input {
+            padding: 10px;
+            width: 300px;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+        }
+    
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #f10d0d;
+            font-weight: bold;
+            color: white;
+            transition: 0.3s;
+        }
+    
+        button:hover {
+            background-color: #ff3c3c;
+            transform: scale(1.05);
+        }
+    </style>
+
+    <script>
+        function generateDork() {
+            let keyword = document.getElementById("keyword").value;
+
+            if (!keyword) {
+                alert("Masukkan keyword dulu bre 😄");
+                return;
+            }
+
+            let dork = `inurl:/index.php/ "${keyword}" "journal"`;
+            let encoded = encodeURIComponent(dork);
+            let url = `https://www.google.com/search?q=${encoded}`;
+
+            window.open(url, "_blank");
+        }
+    </script>
+
+</body>
+</html>
